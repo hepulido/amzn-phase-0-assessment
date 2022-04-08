@@ -1,37 +1,30 @@
 // 1. Write your functions here
 
 
-/* Build the `line` function that takes in an array and returns a string containing everyone with their current place in the line.
- See the example below for how this should be formatted. 
-If there is nobody in line, it should say `"The line is currently empty."`.
-input: array 
-output: string 
-side effect :
-*/
 
 let waitList = [" "," Carlos", " Maria", " John", " Tom"];
 
 
 
 function line(arr){
-      let currentlyLine = "The line is currently: ";
-      for (let i = 1; i < arr.length; i++){
-          currentlyLine = currentlyLine +" "+ arr.indexOf(arr[i])+ "." + arr[i] ;
-      }
-      if (arr.length === 0 ){
-        console.log("The line is currently empty.")
-      }
-    ;
-   return currentlyLine;
+    let currentlyLine = "The line is currently: ";
+    for (let i = 1; i < arr.length; i++){
+        currentlyLine = currentlyLine +" "+ arr.indexOf(arr[i])+ "." + arr[i] ;
+    }
+    if (arr.length === 0 ){
+    console.log("The line is currently empty.")
+    }
+;
+return currentlyLine;
 }
 console.log(line(waitList));
  
   console.log("------------------------------")
 
-  function takeANumber(arr, str){
-      arr.push(str)
-    console.log ("Welcome, "+ str +". You are number " + arr.indexOf(str)+" in line." )
-  }
+function takeANumber(arr, str){
+arr.push(str)
+console.log ("Welcome, "+ str +". You are number " + arr.indexOf(str)+" in line." )
+}
  
  takeANumber(waitList, "David")
 
@@ -39,17 +32,17 @@ console.log("------------------------------")
 
 
 function nowServing (arr){
-    let currentlyServing = waitList[1]
-     for (let i = 1; i < arr.length; i++){
-        if ( arr[1] === arr[1]){
-            arr.shift(); 
-        }
-        else if (arr.length === 0 ){
-            console.log("There is nobody waiting to be served!")
-        }
-     }
-   
-    return "Currently serving "+ currentlyServing +"."
+let currentlyServing = waitList[1]
+    for (let i = 1; i < arr.length; i++){
+    if ( arr[1] === arr[1]){
+        arr.shift(); 
+    }
+    else if (arr.length === 0 ){
+        console.log("There is nobody waiting to be served!")
+    }
+    }
+
+return "Currently serving "+ currentlyServing +"."
 }
       
 console.log(nowServing(waitList))
